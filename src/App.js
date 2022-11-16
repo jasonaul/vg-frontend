@@ -18,6 +18,10 @@ function App() {
       <UsersPage />
     </Route>
 
+    <Route path="/destinations" exact>
+      
+    </Route>
+
     <Route path="/destinations/new" exact>
       <NewDestination />
     </Route>
