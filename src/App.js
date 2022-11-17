@@ -3,9 +3,11 @@ import { BrowserRouter as Router, Route, Redirect, Switch} from 'react-router-do
 
 
 import UsersPage from './user/pages/Users'
+import UserDestinations from './destinations/pages/UserDestinations'
 import NewDestination from './destinations/pages/NewDestination'
 import Navbar from './shared/components/Navigation/Navbar'
 import NavbarTrue from './shared/components/Navigation/NavbarTrue'
+// import { SingleDestination } from './destinations/pages/UserDestinations'
 
 function App() {
   return <Router>
@@ -18,8 +20,12 @@ function App() {
       <UsersPage />
     </Route>
 
-    <Route path="/destinations" exact>
-      
+    {/* <Route path="/destinations/:destID" exact>
+      <SingleDestination />
+    </Route> */}
+
+    <Route path="/:userID/destinations" exact>
+      <UserDestinations />
     </Route>
 
     <Route path="/destinations/new" exact>

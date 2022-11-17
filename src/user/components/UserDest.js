@@ -5,6 +5,8 @@ import Card from '../../shared/components/UIComponents/Card';
 import {Link} from 'react-router-dom'
 
 const UserDest = props => {
+    
+    
     return (
         <li className="user-info">
             

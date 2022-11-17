@@ -2,7 +2,7 @@ import React from "react";
 import './DestinationList.css'
 import Card from "../../shared/components/UIComponents/Card";
 import DestinationItem from "./DestinationItem";
-import { FaPlaceOfWorship } from "react-icons/fa";
+// import { FaPlaceOfWorship } from "react-icons/fa";
 
 const DestinationList = props => {
     if (props.items.length === 0) {

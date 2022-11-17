@@ -13,19 +13,36 @@ const AllUsers = props => {
         );
     }
 
+    // return (
+    //      <ul className="allUsers">
+    //     {props.items.map(user => (
+    //         <UserDest 
+    //         key={user.id} 
+    //         id={user.id} 
+    //         image={user.image} 
+    //         name={user.name} 
+    //         destinationCount={user.destinations} 
+    //         />
+    //     ))}
+    // </ul>
+    // );
+
+    
+    
     return (
-         <ul className="allUsers">
-        {props.items.map(user => (
-            <UserDest 
-            key={user.id} 
-            id={user.id} 
-            image={user.image} 
-            name={user.name} 
-            destinationCount={user.destinations} 
-            />
-        ))}
-    </ul>
-    );
+        <ul className="allUsers">
+       {props.items.map(user => (
+           <UserDest 
+           key={user.id} 
+           id={user.id} 
+           image={user.image} 
+           name={user.name} 
+           destinationCount={user.destinations} 
+           />
+       ))}
+   </ul>
+   );
+
 };
 
 export default AllUsers

@@ -6,7 +6,7 @@ function UsersPage () {
     const USERS = [
         {
         id: 'u1',
-        name: 'Jason Aul',
+        name: 'Jason',
         image: 'https://i.imgur.com/Ioas0HD.png'
         }
 ];
