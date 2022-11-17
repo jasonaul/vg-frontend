@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from 'react-router-dom';
 
 import DestinationList from "../components/DestinationList";
+import SingleDestination from "./SingleDestination";
 
 const DUMMY_DESTINATIONS = [
     {
@@ -40,6 +41,33 @@ const DUMMY_DESTINATIONS = [
         },
         creator: 'u2'
     },
+    {
+        id: 'd4',
+        series: 'Mario',
+        game: 'Super Mario 64',
+        console: 'Nintendo 64',
+        releaseyear: 1996,
+        destinationName: 'Shibam, Yemen',
+        experience: 'Destination',
+        city: 'Shibam',
+        state: '',
+        country: 'Yemen',
+        continent: 'Asia',
+        latitude: 15.9176648,
+        longitude: 48.6235893,
+        creator: 'u3',
+        externalsite: '',
+        headline: 'Background Inspiration for Wet-Dry World',
+        description1: 'Dummy description data. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        description2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        description3: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        image1: '',
+        image2: '',
+        image3: '',
+        ingameimg1: '',
+        ingameimg2: '',
+        ingameimg3: '',
+    },
 ]
 
 const UserDestinations = () => {
@@ -48,10 +76,10 @@ const UserDestinations = () => {
     return <DestinationList items={loadedDestinations}/>
 };
 
-export const SingleDestination = () => {
+export const SingleDestinationDisplay = () => {
     const destID = useParams().destID;
     const loadedDestinations = DUMMY_DESTINATIONS.filter(destination => destination.id === destID);
-    return <DestinationList items={loadedDestinations}/>
+    return <SingleDestination items={loadedDestinations}/>
 }
 
 // export const SingleDestination = () => {
