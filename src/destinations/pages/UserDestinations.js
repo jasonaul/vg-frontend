@@ -26,11 +26,11 @@ const DUMMY_DESTINATIONS = [
             lat: 40.7484405,
             lng: -73.9878584
         },
-        creator: 'u1'
+        creator: 'u2'
     },
     {
         id: 'd3',
-        title: 'Empire State Building',
+        title: 'THE STATIEST Empire State Building',
         description: 'A really famous building.',
         image: 'https://i.imgur.com/KnSikdp.jpeg',
         address: '20 W 34th St, New York, NY 10001',
@@ -38,13 +38,21 @@ const DUMMY_DESTINATIONS = [
             lat: 40.7484405,
             lng: -73.9878584
         },
-        creator: 'u1'
+        creator: 'u2'
     },
 ]
 
 const UserDestinations = () => {
-    return <DestinationList items={DUMMY_DESTINATIONS}/>
+    const userID = useParams().userID;
+    const loadedDestinations = DUMMY_DESTINATIONS.filter(destination => destination.creator === userID);
+    return <DestinationList items={loadedDestinations}/>
 };
+
+export const SingleDestination = () => {
+    const destID = useParams().destID;
+    const loadedDestinations = DUMMY_DESTINATIONS.filter(destination => destination.id === destID);
+    return <DestinationList items={loadedDestinations}/>
+}
 
 // export const SingleDestination = () => {
 //     return <DestinationList key={DUMMY_DESTINATIONS.id}/>

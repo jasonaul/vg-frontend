@@ -7,7 +7,7 @@ import UserDestinations from './destinations/pages/UserDestinations'
 import NewDestination from './destinations/pages/NewDestination'
 import Navbar from './shared/components/Navigation/Navbar'
 import NavbarTrue from './shared/components/Navigation/NavbarTrue'
-// import { SingleDestination } from './destinations/pages/UserDestinations'
+import { SingleDestination } from './destinations/pages/UserDestinations'
 
 function App() {
   return <Router>
@@ -20,9 +20,9 @@ function App() {
       <UsersPage />
     </Route>
 
-    {/* <Route path="/destinations/:destID" exact>
+    <Route path="/destinations/:destID" exact>
       <SingleDestination />
-    </Route> */}
+    </Route>
 
     <Route path="/:userID/destinations" exact>
       <UserDestinations />
